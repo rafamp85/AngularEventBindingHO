@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h3>{{title}}</h3>
+      <p style="padding: 30px;">Counter: {{count}}</p>
+      <app-game-control
+        (startGame) = "gameStarted($event)"
+        (pauseGame) = "gamePaused($event)"
+        (stopGame) = "gameStopped($event)"
+      ></app-game-control>
+      <hr>
+
+      <div class="row">
+        <div class="col-md-4">
+          <app-even [evenNumber]="evenNumber" [ngClass]="evenSelected()"></app-even>
+        </div>
+        <div class="col-md-4">
+          <app-odd [oddNumber]="oddNumber" [ngClass]="oddSelected()"></app-odd>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

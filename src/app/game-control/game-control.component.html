@@ -1,0 +1,22 @@
+<div class="row">
+    <div class="btn-group" role="group">
+        <ng-content></ng-content>
+        
+        <button 
+            class="btn btn-success" 
+            (click)="onStartGame()" 
+            style="margin-right: 10px;"
+        >Start</button>
+
+        <button 
+            class="btn btn-warning" 
+            (click)="onPauseGame()" 
+            style="margin-right: 10px;"
+        >Pause</button>
+
+        <button 
+            class="btn btn-danger" 
+            (click)="onStopGame()"
+        >Stop</button>
+    </div>
+</div>
